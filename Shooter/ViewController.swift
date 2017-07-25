@@ -14,6 +14,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UIImagePickerControll
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var linkNameLabel: UILabel!
     
+    @IBOutlet weak var ratingControl: RatingControl!
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -57,10 +58,6 @@ class ViewController: UIViewController,UITextFieldDelegate,UIImagePickerControll
     
     //MARK: Actions
 
-    @IBAction func submit(_ sender: UIButton) {
-        //nameTextField.text = "www.gogole.com"
-    }
-    
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
         
