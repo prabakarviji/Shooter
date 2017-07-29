@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EqV-vJ-gRW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zfD-ds-pGd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Link Table View Controller-->
+        <!--Your Links-->
         <scene sceneID="jTz-ca-Thr">
             <objects>
                 <tableViewController id="EqV-vJ-gRW" customClass="LinkTableViewController" customModule="Shooter" sceneMemberID="viewController">
@@ -56,15 +56,22 @@
                             <outlet property="delegate" destination="EqV-vJ-gRW" id="3yg-Jq-Ubu"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Links" id="iuZ-HC-i7o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KZV-zK-jyk">
+                            <connections>
+                                <segue destination="7Aj-IB-oDv" kind="presentation" identifier="AddItem" id="Gcl-D7-KjY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYp-QZ-dTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639.375" y="68.661971830985919"/>
+            <point key="canvasLocation" x="3350.625" y="68.661971830985919"/>
         </scene>
-        <!--View Controller-->
+        <!--New Link-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shooter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LinkViewController" customModule="Shooter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-2T-kR9">
-                                <rect key="frame" x="16" y="40" width="288" height="409.5"/>
+                                <rect key="frame" x="16" y="84" width="288" height="409.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-QZ-dqg">
                                         <rect key="frame" x="128.5" y="0.0" width="31.5" height="20.5"/>
@@ -114,21 +121,68 @@
                             <constraint firstItem="I2a-2T-kR9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jLL-ly-NKR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Link" id="hX3-v1-xhw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2ov-cg-bi0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ouY-1y-8R2">
+                            <connections>
+                                <segue destination="HRs-cc-LrT" kind="unwind" unwindAction="unwindToLinkListWithSender:" id="Xpk-3Z-yxX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cancel" destination="2ov-cg-bi0" id="x7h-at-6Hv"/>
                         <outlet property="linkNameLabel" destination="KbU-QZ-dqg" id="jVq-7W-uqn"/>
                         <outlet property="nameTextField" destination="Ipt-G7-0kv" id="WhH-ca-EI9"/>
                         <outlet property="photoImageView" destination="bvG-0i-kUO" id="FO3-P5-bHh"/>
                         <outlet property="ratingControl" destination="gmf-XJ-6wK" id="CVn-Tl-Seb"/>
+                        <outlet property="saveButton" destination="ouY-1y-8R2" id="w9K-Li-TGW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="HRs-cc-LrT" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="jyM-aQ-g75">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="WTF-EA-8og"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="161" y="69"/>
+            <point key="canvasLocation" x="5146.875" y="68.661971830985919"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oIE-32-lab">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zfD-ds-pGd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OPh-pt-xcO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EqV-vJ-gRW" kind="relationship" relationship="rootViewController" id="8aB-Oa-p88"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7Y-n4-hH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2353.125" y="68.661971830985919"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HWX-xU-yrP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Aj-IB-oDv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hn7-An-cKd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Ou-3a-gsy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUi-Nz-FES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4149.375" y="68.661971830985919"/>
         </scene>
     </scenes>
     <resources>

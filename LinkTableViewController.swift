@@ -14,13 +14,22 @@ class LinkTableViewController: UITableViewController {
     
     var links = [Link]()
     
+    //MARK: Actions
+    @IBAction func unwindToLinkList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? LinkViewController, let link = sourceViewController.link {
+            let newIndexPath = IndexPath(row: links.count, section: 0)
+            links.append(link)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
     //MARK: Private Methods
     
     private func loadSampleLinks() {
         
-        let photo1 = UIImage(named: "meal1")
-        let photo2 = UIImage(named: "meal2")
-        let photo3 = UIImage(named: "meal3")
+        let photo1 = UIImage(named: "link1")
+        let photo2 = UIImage(named: "link2")
+        let photo3 = UIImage(named: "link3")
         
         guard let link1 = Link(name: "LINK-1", photo: photo1, rating: 4) else {
             fatalError("Unable to instantiate meal1")
@@ -37,7 +46,7 @@ class LinkTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(LinkTableViewCell.self, forCellReuseIdentifier: "LinkTableViewCell")
+        //self.tableView.register(LinkTableViewCell.self, forCellReuseIdentifier: "LinkTableViewCell")
 
         // Load the sample data.
         loadSampleLinks()
@@ -68,7 +77,7 @@ class LinkTableViewController: UITableViewController {
         // Configure the cell...
         let link = links[indexPath.row]
         
-        //cell.nameLabel.text = "klk"
+        cell.nameLabel.text = link.name
         cell.photoImageView.image = link.photo
         cell.ratingControl.rating = link.rating
 
