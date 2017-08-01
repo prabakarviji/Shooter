@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ShooterExt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C6F551891F23211B002B7A06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6FBC09C1F30FD5600818EAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

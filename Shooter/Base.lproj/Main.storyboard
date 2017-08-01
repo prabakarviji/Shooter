@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-2T-kR9">
-                                <rect key="frame" x="16" y="84" width="288" height="409.5"/>
+                                <rect key="frame" x="16" y="84" width="288" height="410"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-QZ-dqg">
                                         <rect key="frame" x="128.5" y="0.0" width="31.5" height="20.5"/>
@@ -100,6 +100,7 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bvG-0i-kUO" secondAttribute="height" multiplier="1:1" id="N4J-iX-oSw"/>
+                                            <constraint firstAttribute="width" constant="288" id="Vhz-Xy-Aea"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="jyM-aQ-g75" appends="YES" id="2iE-tT-nts"/>
@@ -171,6 +172,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Aj-IB-oDv" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Mqn-7g-zV5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hn7-An-cKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

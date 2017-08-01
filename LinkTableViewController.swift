@@ -17,9 +17,20 @@ class LinkTableViewController: UITableViewController {
     //MARK: Actions
     @IBAction func unwindToLinkList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? LinkViewController, let link = sourceViewController.link {
-            let newIndexPath = IndexPath(row: links.count, section: 0)
-            links.append(link)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing meal.
+                links[selectedIndexPath.row] = link
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                // Add a new link.
+                let newIndexPath = IndexPath(row: links.count, section: 0)
+                links.append(link)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+
+            }
         }
     }
     
