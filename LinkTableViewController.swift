@@ -58,12 +58,26 @@ class LinkTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tableView.register(LinkTableViewCell.self, forCellReuseIdentifier: "LinkTableViewCell")
-
+        fetchStoredData()
         // Load the sample data.
         loadSampleLinks()
 
     }
 
+    private func fetchStoredData(){
+        let defaults = UserDefaults(suiteName: "group.com.spritle.Shooter")
+        defaults?.synchronize()
+        
+        // Check for null value before setting
+        if let restoredValue = defaults!.string(forKey: "linkList") {
+            print("APP URL retrieved: \(restoredValue)")
+        }
+        else {
+            print("APP URL Can't:")
+            //print("APP URL retrieved: \(restoredValue)")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

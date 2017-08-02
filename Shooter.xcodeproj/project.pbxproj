@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95368E931F31B99100A9E702 /* GetLink.js in Resources */ = {isa = PBXBuildFile; fileRef = 95368E921F31B99100A9E702 /* GetLink.js */; };
+		95368E941F31B99100A9E702 /* GetLink.js in Resources */ = {isa = PBXBuildFile; fileRef = 95368E921F31B99100A9E702 /* GetLink.js */; };
 		958F615F1F270A7F00DCD26A /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F615E1F270A7F00DCD26A /* RatingControl.swift */; };
 		958F61631F272C6500DCD26A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F61621F272C6500DCD26A /* Link.swift */; };
 		958F61651F27345E00DCD26A /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F61641F27345E00DCD26A /* LinkTableViewCell.swift */; };
@@ -46,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		95368E921F31B99100A9E702 /* GetLink.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GetLink.js; sourceTree = "<group>"; };
+		95368E951F31D98C00A9E702 /* Shooter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shooter.entitlements; sourceTree = "<group>"; };
+		95368E961F31E3B800A9E702 /* ShooterExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShooterExt.entitlements; sourceTree = "<group>"; };
 		958F615E1F270A7F00DCD26A /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = ../RatingControl.swift; sourceTree = "<group>"; };
 		958F61621F272C6500DCD26A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		958F61641F27345E00DCD26A /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkTableViewCell.swift; path = ../LinkTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		C6F5518C1F23211C002B7A06 /* Shooter */ = {
 			isa = PBXGroup;
 			children = (
+				95368E951F31D98C00A9E702 /* Shooter.entitlements */,
 				C6315BD81F27CB7000BEA446 /* LinkTableViewController.swift */,
 				958F61641F27345E00DCD26A /* LinkTableViewCell.swift */,
 				958F615E1F270A7F00DCD26A /* RatingControl.swift */,
@@ -119,9 +125,11 @@
 		C6FBC09E1F30FD5600818EAA /* ShooterExt */ = {
 			isa = PBXGroup;
 			children = (
+				95368E961F31E3B800A9E702 /* ShooterExt.entitlements */,
 				C6FBC09F1F30FD5600818EAA /* ShareViewController.swift */,
 				C6FBC0A11F30FD5600818EAA /* MainInterface.storyboard */,
 				C6FBC0A41F30FD5600818EAA /* Info.plist */,
+				95368E921F31B99100A9E702 /* GetLink.js */,
 			);
 			path = ShooterExt;
 			sourceTree = "<group>";
@@ -177,11 +185,23 @@
 				TargetAttributes = {
 					C6F551891F23211B002B7A06 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9X9MB5ZUJ7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C6FBC09C1F30FD5600818EAA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9X9MB5ZUJ7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,6 +232,7 @@
 				C6F551981F23211C002B7A06 /* LaunchScreen.storyboard in Resources */,
 				C6F551951F23211C002B7A06 /* Assets.xcassets in Resources */,
 				C6F551931F23211C002B7A06 /* Main.storyboard in Resources */,
+				95368E931F31B99100A9E702 /* GetLink.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FBC0A31F30FD5600818EAA /* MainInterface.storyboard in Resources */,
+				95368E941F31B99100A9E702 /* GetLink.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +403,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Shooter/Shooter.entitlements;
+				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
 				INFOPLIST_FILE = Shooter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spritle.Shooter;
@@ -394,6 +418,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Shooter/Shooter.entitlements;
+				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
 				INFOPLIST_FILE = Shooter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spritle.Shooter;
@@ -405,6 +431,8 @@
 		C6FBC0A81F30FD5600818EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShooterExt/ShooterExt.entitlements;
+				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
 				INFOPLIST_FILE = ShooterExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spritle.Shooter.ShooterExt;
@@ -417,6 +445,8 @@
 		C6FBC0A91F30FD5600818EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShooterExt/ShooterExt.entitlements;
+				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
 				INFOPLIST_FILE = ShooterExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spritle.Shooter.ShooterExt;
@@ -454,6 +484,7 @@
 				C6FBC0A91F30FD5600818EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
