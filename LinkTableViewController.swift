@@ -66,16 +66,8 @@ class LinkTableViewController: UITableViewController {
 
     private func fetchStoredData(){
         let defaults = UserDefaults(suiteName: "group.com.spritle.Shooter")
-        defaults?.synchronize()
-        
-        // Check for null value before setting
-        if let restoredValue = defaults!.string(forKey: "linkList") {
-            print("APP URL retrieved: \(restoredValue)")
-        }
-        else {
-            print("APP URL Can't:")
-            //print("APP URL retrieved: \(restoredValue)")
-        }
+        let storedData = defaults?.object(forKey: "linkList") as? [String] ?? [String]()
+        print(storedData,"###")
     }
     
     override func didReceiveMemoryWarning() {

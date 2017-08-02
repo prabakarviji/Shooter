@@ -13,18 +13,23 @@ import MobileCoreServices
 class ShareViewController: SLComposeServiceViewController {
     
      private var url: NSURL?
+    
+    private var likns = [String]()
 
     override func isContentValid() -> Bool {
+        print("11111")
         // Do validation of contentText and/or NSExtensionContext attachments here
         return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("BEFORE")
         setUpModal()
         getURL()
 
     }
+    
     
     private func setUpModal() {
         let imageView = UIImageView(image: UIImage(named: "vurb-icon-rounded"))
@@ -48,6 +53,7 @@ class ShareViewController: SLComposeServiceViewController {
     }
     
     private func getURL() {
+        print("BEFORE4")
         let extensionItem = extensionContext?.inputItems.first as! NSExtensionItem
         let itemProvider = extensionItem.attachments?.first as! NSItemProvider
         let propertyList = String(kUTTypePropertyList)
@@ -59,9 +65,13 @@ class ShareViewController: SLComposeServiceViewController {
                     let urlString = results["URL"] as? String,
                     let url = NSURL(string: urlString) {
                         print("URL retrieved: \(urlString)")
-                        //self.url = url
                         let defaults = UserDefaults(suiteName: "group.com.spritle.Shooter")
-                        defaults?.set(urlString, forKey: "linkList")
+                        var storedData = defaults?.object(forKey: "linkList") as? [String] ?? [String]()
+                        print(storedData,"##")
+                        storedData.append(urlString)
+                        defaults?.set(storedData, forKey: "linkList")
+                        
+                        // call this after you update
                         defaults?.synchronize()
                     }
                 }
