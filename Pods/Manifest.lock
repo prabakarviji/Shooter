@@ -1,0 +1,22 @@
+PODS:
+  - Ji (2.0.1):
+    - Ji/Ji (= 2.0.1)
+  - Ji/Ji (2.0.1):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (2.0.1)
+  - NVActivityIndicatorView (3.6.1)
+  - ReadabilityKit (0.6.1):
+    - Ji (~> 2.0.1)
+
+DEPENDENCIES:
+  - NVActivityIndicatorView
+  - ReadabilityKit
+
+SPEC CHECKSUMS:
+  Ji: 6bb602a28dd08b804158f64990e6051ed5de0110
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  ReadabilityKit: 49c26a2da9708ae3b355854d5bee6a7edee2dfee
+
+PODFILE CHECKSUM: 2a71ad078092626e557899c5a4510cf82dc8bea2
+
+COCOAPODS: 1.0.0
