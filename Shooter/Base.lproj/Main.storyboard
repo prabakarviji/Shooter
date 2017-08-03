@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zfD-ds-pGd">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zfD-ds-pGd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,16 +36,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYx-ti-AMb" customClass="RatingControl" customModule="Shooter" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="37" width="214" height="44"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This Weblink contains more useful data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QkR-BY-FzT">
+                                            <rect key="frame" x="98" y="37" width="214" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="ki8-2x-QCP" id="njK-Sc-0Dh"/>
                                     <outlet property="photoImageView" destination="33E-JL-vXp" id="Whe-M6-aDt"/>
-                                    <outlet property="ratingControl" destination="fYx-ti-AMb" id="DyH-8t-jSh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,97 +57,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Links" id="iuZ-HC-i7o">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KZV-zK-jyk">
-                            <connections>
-                                <segue destination="7Aj-IB-oDv" kind="presentation" identifier="AddItem" id="Gcl-D7-KjY"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KZV-zK-jyk"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYp-QZ-dTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3350.625" y="68.661971830985919"/>
-        </scene>
-        <!--New Link-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="LinkViewController" customModule="Shooter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-2T-kR9">
-                                <rect key="frame" x="16" y="84" width="288" height="410"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-QZ-dqg">
-                                        <rect key="frame" x="128.5" y="0.0" width="31.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipt-G7-0kv">
-                                        <rect key="frame" x="0.0" y="29.5" width="288" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="bvG-0i-kUO">
-                                        <rect key="frame" x="0.0" y="68.5" width="288" height="288"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="bvG-0i-kUO" secondAttribute="height" multiplier="1:1" id="N4J-iX-oSw"/>
-                                            <constraint firstAttribute="width" constant="288" id="Vhz-Xy-Aea"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="jyM-aQ-g75" appends="YES" id="2iE-tT-nts"/>
-                                        </connections>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-XJ-6wK" customClass="RatingControl" customModule="Shooter" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="365.5" width="252" height="44"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Ipt-G7-0kv" secondAttribute="trailing" id="eqD-nE-KTM"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="I2a-2T-kR9" secondAttribute="trailing" id="Jb3-cm-22E"/>
-                            <constraint firstItem="I2a-2T-kR9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cfM-2r-p55"/>
-                            <constraint firstItem="I2a-2T-kR9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jLL-ly-NKR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Link" id="hX3-v1-xhw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2ov-cg-bi0"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ouY-1y-8R2">
-                            <connections>
-                                <segue destination="HRs-cc-LrT" kind="unwind" unwindAction="unwindToLinkListWithSender:" id="Xpk-3Z-yxX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="cancel" destination="2ov-cg-bi0" id="x7h-at-6Hv"/>
-                        <outlet property="linkNameLabel" destination="KbU-QZ-dqg" id="jVq-7W-uqn"/>
-                        <outlet property="nameTextField" destination="Ipt-G7-0kv" id="WhH-ca-EI9"/>
-                        <outlet property="photoImageView" destination="bvG-0i-kUO" id="FO3-P5-bHh"/>
-                        <outlet property="ratingControl" destination="gmf-XJ-6wK" id="CVn-Tl-Seb"/>
-                        <outlet property="saveButton" destination="ouY-1y-8R2" id="w9K-Li-TGW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="HRs-cc-LrT" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="jyM-aQ-g75">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="WTF-EA-8og"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="5146.875" y="68.661971830985919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oIE-32-lab">
@@ -166,25 +81,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7Y-n4-hH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2353.125" y="68.661971830985919"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HWX-xU-yrP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Aj-IB-oDv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Mqn-7g-zV5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hn7-An-cKd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Ou-3a-gsy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wUi-Nz-FES" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4149.375" y="68.661971830985919"/>
         </scene>
     </scenes>
     <resources>

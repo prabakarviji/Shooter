@@ -7,32 +7,17 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class LinkTableViewController: UITableViewController {
+class LinkTableViewController: UITableViewController,NVActivityIndicatorViewable {
     
     //MARK: Properties
     
     var links = [Link]()
+    var activityIndicatorView : NVActivityIndicatorView!
+    var blurEffectView : UIView!
     
-    //MARK: Actions
-    @IBAction func unwindToLinkList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? LinkViewController, let link = sourceViewController.link {
-            
-            
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                // Update an existing meal.
-                links[selectedIndexPath.row] = link
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            }
-            else {
-                // Add a new link.
-                let newIndexPath = IndexPath(row: links.count, section: 0)
-                links.append(link)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
 
-            }
-        }
-    }
     
     //MARK: Private Methods
     
@@ -42,13 +27,13 @@ class LinkTableViewController: UITableViewController {
         let photo2 = UIImage(named: "link2")
         let photo3 = UIImage(named: "link3")
         
-        guard let link1 = Link(name: "LINK-1", photo: photo1, rating: 4) else {
+        guard let link1 = Link(name: "LINK-1", photo: photo1) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let link2 = Link(name: "LINK-2", photo: photo2, rating: 4) else {
+        guard let link2 = Link(name: "LINK-2", photo: photo2) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let link3 = Link(name: "LINK-3", photo: photo3, rating: 4) else {
+        guard let link3 = Link(name: "LINK-3", photo: photo3) else {
             fatalError("Unable to instantiate meal1")
         }
         
@@ -58,9 +43,26 @@ class LinkTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tableView.register(LinkTableViewCell.self, forCellReuseIdentifier: "LinkTableViewCell")
+        
+        func showProgressView()
+        {
+            activityIndicatorView = Helper.createLoaderView(self.navigationController!.view)
+            let yPostion = self.navigationController?.navigationBar.frame.maxY
+            blurEffectView = Helper.addBlurView((self.navigationController?.view)!,y:yPostion!)
+            self.navigationController!.view.addSubview(blurEffectView)
+            self.navigationController!.view.addSubview(activityIndicatorView)
+        }
+        
+        func hideProgressView()
+        {
+            Helper.removeLoaderView(activityIndicatorView)
+            blurEffectView.removeFromSuperview()
+        }
+        
         fetchStoredData()
+        showProgressView()
         // Load the sample data.
-        loadSampleLinks()
+        //loadSampleLinks()
 
     }
 
@@ -96,7 +98,7 @@ class LinkTableViewController: UITableViewController {
         
         cell.nameLabel.text = link.name
         cell.photoImageView.image = link.photo
-        cell.ratingControl.rating = link.rating
+        //cell.ratingControl.rating = link.rating
 
         return cell
     }

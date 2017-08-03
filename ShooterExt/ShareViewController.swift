@@ -63,7 +63,7 @@ class ShareViewController: SLComposeServiceViewController {
             OperationQueue.main.addOperation {
                 if let results = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary,
                     let urlString = results["URL"] as? String,
-                    let url = NSURL(string: urlString) {
+                    let _ = NSURL(string: urlString) {
                         print("URL retrieved: \(urlString)")
                         let defaults = UserDefaults(suiteName: "group.com.spritle.Shooter")
                         var storedData = defaults?.object(forKey: "linkList") as? [String] ?? [String]()

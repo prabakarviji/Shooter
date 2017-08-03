@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B4E17859E631BC1475C87A /* Pods_Shooter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CFF9CE53CB2542A0163105 /* Pods_Shooter.framework */; };
+		95128AF61F33212F0070F7D1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95128AF51F33212F0070F7D1 /* LoadingView.swift */; };
 		95368E931F31B99100A9E702 /* GetLink.js in Resources */ = {isa = PBXBuildFile; fileRef = 95368E921F31B99100A9E702 /* GetLink.js */; };
 		95368E941F31B99100A9E702 /* GetLink.js in Resources */ = {isa = PBXBuildFile; fileRef = 95368E921F31B99100A9E702 /* GetLink.js */; };
-		958F615F1F270A7F00DCD26A /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F615E1F270A7F00DCD26A /* RatingControl.swift */; };
 		958F61631F272C6500DCD26A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F61621F272C6500DCD26A /* Link.swift */; };
 		958F61651F27345E00DCD26A /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F61641F27345E00DCD26A /* LinkTableViewCell.swift */; };
+		AC4400F1BF993645EC606297 /* Pods_ShooterExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C0828EC748CBF81D8ECBF4 /* Pods_ShooterExt.framework */; };
 		C6315BD91F27CB7000BEA446 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6315BD81F27CB7000BEA446 /* LinkTableViewController.swift */; };
-		C66EE1AD1F2D1ADB00F762E3 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66EE1AC1F2D1ADB00F762E3 /* LinkViewController.swift */; };
 		C6F5518E1F23211C002B7A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F5518D1F23211C002B7A06 /* AppDelegate.swift */; };
 		C6F551931F23211C002B7A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F551911F23211C002B7A06 /* Main.storyboard */; };
 		C6F551951F23211C002B7A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F551941F23211C002B7A06 /* Assets.xcassets */; };
@@ -48,14 +49,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		23CFF9CE53CB2542A0163105 /* Pods_Shooter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shooter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C0828EC748CBF81D8ECBF4 /* Pods_ShooterExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShooterExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ECB2C068584B5D80B2246A /* Pods-ShooterExt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShooterExt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShooterExt/Pods-ShooterExt.release.xcconfig"; sourceTree = "<group>"; };
+		95128AF51F33212F0070F7D1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		95368E921F31B99100A9E702 /* GetLink.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GetLink.js; sourceTree = "<group>"; };
 		95368E951F31D98C00A9E702 /* Shooter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shooter.entitlements; sourceTree = "<group>"; };
 		95368E961F31E3B800A9E702 /* ShooterExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShooterExt.entitlements; sourceTree = "<group>"; };
-		958F615E1F270A7F00DCD26A /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = ../RatingControl.swift; sourceTree = "<group>"; };
 		958F61621F272C6500DCD26A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		958F61641F27345E00DCD26A /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkTableViewCell.swift; path = ../LinkTableViewCell.swift; sourceTree = "<group>"; };
+		A0D2187D3FC9EE4BD6AFDA05 /* Pods-ShooterExt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShooterExt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShooterExt/Pods-ShooterExt.debug.xcconfig"; sourceTree = "<group>"; };
+		C492229C34EC334566372DF5 /* Pods-Shooter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shooter/Pods-Shooter.debug.xcconfig"; sourceTree = "<group>"; };
 		C6315BD81F27CB7000BEA446 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkTableViewController.swift; path = ../LinkTableViewController.swift; sourceTree = "<group>"; };
-		C66EE1AC1F2D1ADB00F762E3 /* LinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 		C6F5518A1F23211C002B7A06 /* Shooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F5518D1F23211C002B7A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F551921F23211C002B7A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		C6FBC09F1F30FD5600818EAA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C6FBC0A21F30FD5600818EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C6FBC0A41F30FD5600818EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB89141FC21F797C43F1D6BC /* Pods-Shooter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shooter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shooter/Pods-Shooter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B4E17859E631BC1475C87A /* Pods_Shooter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,18 +87,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4400F1BF993645EC606297 /* Pods_ShooterExt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AA5103A7CEFBA6859FB21F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C492229C34EC334566372DF5 /* Pods-Shooter.debug.xcconfig */,
+				FB89141FC21F797C43F1D6BC /* Pods-Shooter.release.xcconfig */,
+				A0D2187D3FC9EE4BD6AFDA05 /* Pods-ShooterExt.debug.xcconfig */,
+				59ECB2C068584B5D80B2246A /* Pods-ShooterExt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6514E1FC176734F855A0625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23CFF9CE53CB2542A0163105 /* Pods_Shooter.framework */,
+				56C0828EC748CBF81D8ECBF4 /* Pods_ShooterExt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6F551811F23211B002B7A06 = {
 			isa = PBXGroup;
 			children = (
 				C6F5518C1F23211C002B7A06 /* Shooter */,
 				C6FBC09E1F30FD5600818EAA /* ShooterExt */,
 				C6F5518B1F23211C002B7A06 /* Products */,
+				4AA5103A7CEFBA6859FB21F8 /* Pods */,
+				B6514E1FC176734F855A0625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,14 +140,13 @@
 				95368E951F31D98C00A9E702 /* Shooter.entitlements */,
 				C6315BD81F27CB7000BEA446 /* LinkTableViewController.swift */,
 				958F61641F27345E00DCD26A /* LinkTableViewCell.swift */,
-				958F615E1F270A7F00DCD26A /* RatingControl.swift */,
 				C6F5518D1F23211C002B7A06 /* AppDelegate.swift */,
-				C66EE1AC1F2D1ADB00F762E3 /* LinkViewController.swift */,
 				C6F551911F23211C002B7A06 /* Main.storyboard */,
 				C6F551941F23211C002B7A06 /* Assets.xcassets */,
 				C6F551961F23211C002B7A06 /* LaunchScreen.storyboard */,
 				C6F551991F23211C002B7A06 /* Info.plist */,
 				958F61621F272C6500DCD26A /* Link.swift */,
+				95128AF51F33212F0070F7D1 /* LoadingView.swift */,
 			);
 			path = Shooter;
 			sourceTree = "<group>";
@@ -141,10 +170,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6F5519C1F23211C002B7A06 /* Build configuration list for PBXNativeTarget "Shooter" */;
 			buildPhases = (
+				20F5FCBC210DD49B8ECB9682 /* 📦 Check Pods Manifest.lock */,
 				C6F551861F23211B002B7A06 /* Sources */,
 				C6F551871F23211B002B7A06 /* Frameworks */,
 				C6F551881F23211B002B7A06 /* Resources */,
 				C6FBC0AB1F30FD5600818EAA /* Embed App Extensions */,
+				CF7F37AA24DF9EC306685509 /* 📦 Embed Pods Frameworks */,
+				2F0A21189954F3880EFF3B08 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6FBC0AA1F30FD5600818EAA /* Build configuration list for PBXNativeTarget "ShooterExt" */;
 			buildPhases = (
+				5AC3BD0BFA1EB26E5EE1F24B /* 📦 Check Pods Manifest.lock */,
 				C6FBC0991F30FD5600818EAA /* Sources */,
 				C6FBC09A1F30FD5600818EAA /* Frameworks */,
 				C6FBC09B1F30FD5600818EAA /* Resources */,
+				DB859A2F5D07018A0C9787F0 /* 📦 Embed Pods Frameworks */,
+				F7FFBDD8261B51FE1FC83335 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,16 +282,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20F5FCBC210DD49B8ECB9682 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F0A21189954F3880EFF3B08 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shooter/Pods-Shooter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC3BD0BFA1EB26E5EE1F24B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF7F37AA24DF9EC306685509 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shooter/Pods-Shooter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB859A2F5D07018A0C9787F0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShooterExt/Pods-ShooterExt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7FFBDD8261B51FE1FC83335 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShooterExt/Pods-ShooterExt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C6F551861F23211B002B7A06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				958F61651F27345E00DCD26A /* LinkTableViewCell.swift in Sources */,
-				958F615F1F270A7F00DCD26A /* RatingControl.swift in Sources */,
-				C66EE1AD1F2D1ADB00F762E3 /* LinkViewController.swift in Sources */,
 				C6F5518E1F23211C002B7A06 /* AppDelegate.swift in Sources */,
 				958F61631F272C6500DCD26A /* Link.swift in Sources */,
+				95128AF61F33212F0070F7D1 /* LoadingView.swift in Sources */,
 				C6315BD91F27CB7000BEA446 /* LinkTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +527,7 @@
 		};
 		C6F5519D1F23211C002B7A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C492229C34EC334566372DF5 /* Pods-Shooter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -415,6 +543,7 @@
 		};
 		C6F5519E1F23211C002B7A06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB89141FC21F797C43F1D6BC /* Pods-Shooter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -430,6 +559,7 @@
 		};
 		C6FBC0A81F30FD5600818EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D2187D3FC9EE4BD6AFDA05 /* Pods-ShooterExt.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShooterExt/ShooterExt.entitlements;
 				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
@@ -444,6 +574,7 @@
 		};
 		C6FBC0A91F30FD5600818EAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59ECB2C068584B5D80B2246A /* Pods-ShooterExt.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ShooterExt/ShooterExt.entitlements;
 				DEVELOPMENT_TEAM = 9X9MB5ZUJ7;
